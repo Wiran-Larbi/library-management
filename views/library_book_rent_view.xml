@@ -14,7 +14,6 @@
         <field name="name">Book Rents</field>
         <field name="res_model">library.book.rent</field>
         <field name="view_mode">tree,form</field>
-        <field name="view_id" ref="view_library_book_rent_list"/>
     </record>
 
     <record id="view_library_book_rent_form" model="ir.ui.view">
