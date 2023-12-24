@@ -21,7 +21,7 @@ class BookCategory(models.Model):
     )
     parent_path = fields.Char(index=True)
     
-    @api.constraint('parent_id')
+    @api.constrains('parent_id')
     def _check_hierarchy(self):
         if not self._check_recursion():
             raise models.ValidationError('Error! You cannot create recursive categories.')

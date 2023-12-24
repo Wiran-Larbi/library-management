@@ -43,7 +43,7 @@ class LibraryBook(models.Model):
         self.ensure_one()
         self.state = 'lost'
         
-    @api.constraint('date_release', 'date_updated')
+    @api.constrains('date_release', 'date_updated')
     def _compute_nbr_jours(self):
         for rec in self:
             if rec.date_updated:
