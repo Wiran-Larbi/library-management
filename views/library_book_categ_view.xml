@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <!-- Menu items for book category management -->
+    <!--
     <record id="menu_library_book_category" model="ir.ui.menu">
         <field name="name">Book Categories</field>
         <field name="action" ref="action_book_category_list"/>
         <field name="parent_id" ref="base.menu_books_root"/>
         <field name="sequence" type="int">10</field>
     </record>
-
+    -->
     <record id="action_book_category_list" model="ir.actions.act_window">
         <field name="name">Book Categories</field>
         <field name="res_model">library.book.category</field>
         <field name="view_mode">tree,form</field>
-        <field name="view_id" ref="view_book_category_list"/>
     </record>
 
 

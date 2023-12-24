@@ -10,8 +10,10 @@
     'author': 'DotCipher',
     'depends': ['base'],
     'data': [
-        'views/book_category_list.xml',
-        'views/book_category_form.xml',
+        'views/library_book_categ_view.xml',
+        'views/library_book_rent_view.xml',
+        'views/library_book_view.xml',
+        'views/library_rent_stage_view.xml'
     ],
     'installable': True,
     'auto_install': False,

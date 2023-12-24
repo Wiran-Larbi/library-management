@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
+    <!--
     <record id="menu_library_book_rent" model="ir.ui.menu">
         <field name="name">Book Rents</field>
         <field name="action" ref="action_library_book_rent_list"/>
         <field name="parent_id" ref="base.menu_books_root"/>
         <field name="sequence" type="int">20</field>
     </record>
+    -->
     
     <record id="action_library_book_rent_list" model="ir.actions.act_window">
         <field name="name">Book Rents</field>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
+    <!--
     <record id="menu_library_rent_stage" model="ir.ui.menu">
         <field name="name">Library Rent Stages</field>
         <field name="action" ref="action_library_rent_stage_list"/>
         <field name="parent_id" ref="base.menu_books_root"/>
         <field name="sequence" type="int">15</field>
     </record>
-    
+    -->
     <record id="action_library_rent_stage_list" model="ir.actions.act_window">
         <field name="name">Library Rent Stages</field>
         <field name="res_model">library.rent.stage</field>
