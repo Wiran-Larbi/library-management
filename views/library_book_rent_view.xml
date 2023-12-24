@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="menu_library_book_rent" model="ir.ui.menu">
+        <field name="name">Book Rents</field>
+        <field name="action" ref="action_library_book_rent_list"/>
+        <field name="parent_id" ref="base.menu_books_root"/>
+        <field name="sequence" type="int">20</field>
+    </record>
+    
+    <record id="action_library_book_rent_list" model="ir.actions.act_window">
+        <field name="name">Book Rents</field>
+        <field name="res_model">library.book.rent</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_library_book_rent_list"/>
+    </record>
+
+    <record id="view_library_book_rent_form" model="ir.ui.view">
+        <field name="name">library.book.rent.form</field>
+        <field name="model">library.book.rent</field>
+        <field name="arch" type="xml">
+            <form string="Book Rent">
+                <group>
+                    <field name="book_id"/>
+                    <field name="borrowed_id"/>
+                    <field name="state"/>
+                    <field name="rent_date"/>
+                    <field name="stage_id"/>
+                </group>
+            </form>
+        </field>
+    </record>
+    
+    <record id="view_library_book_rent_list" model="ir.ui.view">
+        <field name="name">library.book.rent.list</field>
+        <field name="model">library.book.rent</field>
+        <field name="arch" type="xml">
+            <tree string="Book Rents">
+                <field name="book_id"/>
+                <field name="borrowed_id"/>
+                <field name="state"/>
+                <field name="rent_date"/>
+            </tree>
+        </field>
+    </record>
+    
+</odoo>

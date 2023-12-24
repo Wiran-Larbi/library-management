@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="menu_library_book" model="ir.ui.menu">
+        <field name="name">Library Books</field>
+        <field name="action" ref="action_library_book_list"/>
+        <field name="parent_id" ref="base.menu_books_root"/>
+        <field name="sequence" type="int">10</field>
+    </record>
+    
+    <record id="action_library_book_list" model="ir.actions.act_window">
+        <field name="name">Library Books</field>
+        <field name="res_model">library.book</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_library_book_list"/>
+    </record>
+
+    <record id="view_library_book_form" model="ir.ui.view">
+        <field name="name">library.book.form</field>
+        <field name="model">library.book</field>
+        <field name="arch" type="xml">
+            <form string="Library Book">
+                <group>
+                    <field name="short_name"/>
+                    <field name="name"/>
+                    <field name="date_release"/>
+                    <field name="date_updated"/>
+                    <field name="active"/>
+                    <field name="author_ids"/>
+                    <field name="state"/>
+                    <field name="cost_price"/>
+                    <field name="category_id"/>
+                    <field name="currency_id"/>
+                    <field name="retail_price"/>
+                    <field name="description"/>
+                    <field name="cover"/>
+                    <field name="out_of_print"/>
+                    <field name="pages"/>
+                    <field name="nbr_jours"/>
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="view_library_book_list" model="ir.ui.view">
+        <field name="name">library.book.list</field>
+        <field name="model">library.book</field>
+        <field name="arch" type="xml">
+            <tree string="Library Books">
+                <field name="short_name"/>
+                <field name="name"/>
+                <field name="date_release"/>
+                <field name="date_updated"/>
+                <field name="active"/>
+                <field name="author_ids"/>
+                <field name="state"/>
+                <field name="category_id"/>
+                <field name="retail_price"/>
+                <field name="out_of_print"/>
+                <field name="pages"/>
+                <!-- Add more fields as needed -->
+            </tree>
+        </field>
+    </record>
+    
+
+</odoo>
